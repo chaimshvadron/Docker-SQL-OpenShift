@@ -7,5 +7,4 @@ oc apply -f mysql-pvc.yaml
 oc apply -f mysql-deployment.yaml
 # Create a service for MySQL
 oc apply -f mysql-service.yaml
-# Expose the MySQL service
-oc expose service/mysql
+
