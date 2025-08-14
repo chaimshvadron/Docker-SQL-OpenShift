@@ -1,12 +1,13 @@
 from fastapi import FastAPI, HTTPException
 import mysql.connector
+import os
 
 app = FastAPI()
 
 DB_HOST = "127.0.0.1"
 DB_PORT = "3306"
 DB_USER = "root"
-DB_PASS = "myStrongPass"
+DB_PASS = os.getenv("MYSQL_ROOT_PASSWORD", "myStrongPass")
 DB_NAME = "data"
 
 def get_conn():
