@@ -1,5 +1,5 @@
-# Create a new project
-oc new-project dataload
 
 # Create a secret for MySQL 
-oc create secret generic mysql-secret --from-literal=password=myStrongPass
+oc apply -f mysql-secret.yaml
+# Create a persistent volume claim for MySQL
+oc apply -f mysql-pvc.yaml
